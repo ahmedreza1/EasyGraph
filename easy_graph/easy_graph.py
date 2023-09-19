@@ -41,6 +41,12 @@ def boxplot(data, col, title='Boxplot', ylabel='Y-axis'):
     plt.ylabel(ylabel)
     plt.show()
 
+def pie_chart(data, col, labels_col, title='Pie Chart'):
+    """Generate a pie chart from a pandas DataFrame."""
+    plt.pie(data[col], labels=data[labels_col], autopct='%1.1f%%')
+    plt.title(title)
+    plt.show()
+
 
 
 # Additional functions for other chart types can be added here.
