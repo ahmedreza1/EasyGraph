@@ -18,7 +18,7 @@ df = pd.DataFrame(data)
 df['Is Profitable'] = df['Profit'] > 0
 
 # Testing the bar_chart function
-bar_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales')
+bar_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales', interactive=True)
 
 # Testing the line_chart function
 line_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales')
@@ -33,7 +33,7 @@ histogram(df, 'Sales', title='Sales Distribution', xlabel='Sales', ylabel='Frequ
 boxplot(df, 'Sales', title='Sales Boxplot', ylabel='Sales')
 
 # Testing the pie_chart function
-pie_chart(df, 'Sales', 'Month', title='Sales Distribution')
+pie_chart(df, 'Sales', 'Month', title='Sales Distribution', interactive=True)
 
 # Testing the stacked_bar_chart function
 stacked_bar_chart(df, 'Month', ['Sales', 'Expense'], title='Monthly Sales and Expense', xlabel='Month', ylabel='Value')
