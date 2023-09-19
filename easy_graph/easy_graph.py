@@ -47,6 +47,49 @@ def pie_chart(data, col, labels_col, title='Pie Chart'):
     plt.title(title)
     plt.show()
 
+def stacked_bar_chart(data, x_col, y_cols, title='Stacked Bar Chart', xlabel='X-axis', ylabel='Y-axis'):
+    """Generate a stacked bar chart from a pandas DataFrame."""
+    ax = data.plot(x=x_col, kind='bar', stacked=True)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.show()
 
+def area_chart(data, x_col, y_col, title='Area Chart', xlabel='X-axis', ylabel='Y-axis'):
+    """Generate an area chart from a pandas DataFrame."""
+    plt.fill_between(data[x_col], data[y_col])
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.show()
+
+def hexbin_plot(data, x_col, y_col, gridsize=50, title='Hexbin Plot', xlabel='X-axis', ylabel='Y-axis'):
+    """Generate a hexbin plot from a pandas DataFrame."""
+    plt.hexbin(data[x_col], data[y_col], gridsize=gridsize, cmap='Greens')
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.colorbar()
+    plt.show()
+
+def violin_plot(data, col, title='Violin Plot', ylabel='Y-axis'):
+    """Generate a violin plot from a pandas DataFrame using Seaborn."""
+    sns.violinplot(y=data[col])
+    plt.title(title)
+    plt.ylabel(ylabel)
+    plt.show()
+
+def correlation_matrix(data, title='Correlation Matrix'):
+    """Generate a correlation matrix from a pandas DataFrame using Seaborn."""
+    corr = data.corr()
+    sns.heatmap(corr, annot=True, cmap='coolwarm')
+    plt.title(title)
+    plt.show()
+
+def pair_plot(data, title='Pair Plot'):
+    """Generate a pair plot from a pandas DataFrame using Seaborn."""
+    sns.pairplot(data)
+    plt.suptitle(title, y=1.02)
+    plt.show()
 
 # Additional functions for other chart types can be added here.
