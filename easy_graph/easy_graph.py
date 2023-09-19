@@ -34,6 +34,13 @@ def histogram(data, col, bins=10, title='Histogram', xlabel='X-axis', ylabel='Fr
     plt.ylabel(ylabel)
     plt.show()
 
+def boxplot(data, col, title='Boxplot', ylabel='Y-axis'):
+    """Generate a box plot from a pandas DataFrame."""
+    plt.boxplot(data[col])
+    plt.title(title)
+    plt.ylabel(ylabel)
+    plt.show()
+
 
 
 # Additional functions for other chart types can be added here.
