@@ -1,9 +1,10 @@
 # EasyGraph 📊
 
-**EasyGraph** is your go-to Python package for creating beautiful and intuitive graphs with just a few lines of code. Dive into data visualization with various chart types including line charts, bar charts, scatter plots, and more!
+**EasyGraph** is your go-to Python package for creating beautiful, intuitive, and now interactive graphs with just a few lines of code. Dive into data visualization with various chart types including line charts, bar charts, scatter plots, and more. With the new interactive functionality, users can now hover over data points to get detailed information, pan, and zoom to explore their graphs in a much more engaging manner.
 
 ## Features 🚀
 
+- **Interactive Charts and Graphs**: All your favorite charts and graphs are now interactive, offering dynamic insights with functionalities like hover, pan, and zoom. 
 - **Variety of Chart Types**: Supports a wide range of chart types for versatile data visualization.
 - **Zero to Hero**: Start creating insightful graphs with no prior experience.
 - **Plug and Play**: Easy to install and get started with.
@@ -35,6 +36,11 @@ df = pd.DataFrame(data)
 # Set a theme for your charts (optional)
 set_theme('darkgrid')
 
+# Enable interactive mode (new feature!)
+interactive=True # False by default
+
+bar_chart(df, x_col='Month', y_col='Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales', interactive=True)
+
 # Boom! A bar chart!
 bar_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales')
 
@@ -44,6 +50,12 @@ line_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='
 ```
 
 # Documentation 📖
+
+### Interactive Functionality 🔍
+
+The latest update brings interactive functionality to all the chart and graph types in EasyGraph. Now, while visualizing data using any of the chart types, users can hover over individual data points to view detailed information. This not only makes the data analysis process more insightful but also offers a dynamic user experience. Make sure to explore functionalities like panning and zooming to dive deeper into your visualizations!
+
+
 
 ## set_theme(theme=None)
 
