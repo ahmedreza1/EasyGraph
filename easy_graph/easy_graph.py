@@ -26,6 +26,14 @@ def scatter_plot(data, x_col, y_col, title='Scatter Plot', xlabel='X-axis', ylab
     plt.ylabel(ylabel)
     plt.show()
 
+def histogram(data, col, bins=10, title='Histogram', xlabel='X-axis', ylabel='Frequency'):
+    """Generate a histogram from a pandas DataFrame."""
+    plt.hist(data[col], bins=bins)
+    plt.title(title)
+    plt.xlabel(xlabel)
+    plt.ylabel(ylabel)
+    plt.show()
+
 
 
 # Additional functions for other chart types can be added here.
