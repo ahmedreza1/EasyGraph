@@ -1,0 +1,11 @@
+# .gitignore file
+*.egg-info/
+build/
+dist/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+db.sqlite3
+*.git
