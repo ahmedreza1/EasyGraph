@@ -1,0 +1,1 @@
+from .easy_graph import bar_chart, line_chart
