@@ -13,7 +13,7 @@
 Get it fresh from PyPI:
 
 ```bash
-pip install EasyGraph
+pip install EasyGraph-py
 ```
 
 # Usage 🛠

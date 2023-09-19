@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='EasyGraph',
+    name='EasyGraph_py',
     version='0.1.0',
     url='https://github.com/ahmedreza1/EasyGraph',
     author='Md Ahmed Reza',
