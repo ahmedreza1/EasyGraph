@@ -298,4 +298,52 @@ def lag_plot(series, lag=1, title='Lag Plot', theme=None):
     finally:
         set_theme() # Reset to default theme after plotting
 
+# Here we are introducing Geographical Plotting, by adding three types of maps Choropleth, Scattergeo, and Linegeo
+
+def choropleth_map(data, geojson, locations, color, title='Choropleth Map', theme=None, interactive=True):
+    set_theme(theme)
+    try:
+        if interactive:
+            fig = px.choropleth(data, geojson=geojson, locations=locations, color=color,
+                                featureidkey="properties.name",
+                                title=title)
+            fig.update_geos(projection_type="mercator")
+            fig.show()
+        else:
+            print("Interactive mode is recommended for Choropleth Map!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        set_theme()  # Reset to default theme after plotting
+
+def scattergeo_map(data, lat_col, lon_col, text_col, title='Scattergeo Map', theme=None, interactive=True):
+    set_theme(theme)
+    try:
+        if interactive:
+            fig = px.scatter_geo(data, lat=lat_col, lon=lon_col, text=text_col,
+                                 title=title)
+            fig.update_geos(projection_type="mercator")
+            fig.show()
+        else:
+            print("Interactive mode is recommended for Scattergeo Map!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        set_theme()  # Reset to default theme after plotting
+
+def linegeo_map(data, lat_col, lon_col, line_group, title='Linegeo Map', theme=None, interactive=True):
+    set_theme(theme)
+    try:
+        if interactive:
+            fig = px.line_geo(data, lat=lat_col, lon=lon_col, line_group=line_group,
+                              title=title)
+            fig.update_geos(projection_type="mercator")
+            fig.show()
+        else:
+            print("Interactive mode is recommended for Linegeo Map!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        set_theme()  # Reset to default theme after plotting
+
 # Additional functions for other chart types can be added here.
