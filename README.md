@@ -10,6 +10,8 @@
 - **Plug and Play**: Easy to install and get started with.
 - **Flexible**: Customize your charts with a wide range of parameters.
 - **Theming Support**: Adapt the visuals of your charts with seaborn and matplotlib themes.
+- **Time Series Analysis**: EasyGraph offers a variety of charts to assist in uncovering patterns, anomalies, and trends in your time series data.
+- **Geological Plotting**: EasyGraph offers a variety of charts to help analyze geographical data, uncover insights, and make data-driven decisions.
 
 ## Installation 💻
 
