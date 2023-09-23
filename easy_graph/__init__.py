@@ -1,1 +1,1 @@
-from .easy_graph import bar_chart, line_chart, scatter_plot, histogram, boxplot, pie_chart, stacked_bar_chart, area_chart, hexbin_plot, violin_plot, correlation_matrix, pair_plot
+from .easy_graph import bar_chart, line_chart, scatter_plot, histogram, boxplot, pie_chart, stacked_bar_chart, area_chart, hexbin_plot, violin_plot, correlation_matrix, pair_plot, candlestick_chart, autocorrelation_plot, lag_plot
