@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='EasyGraph_py',
-    version='1.0.1',
+    version='1.2.1',
     url='https://github.com/ahmedreza1/EasyGraph',
     author='Md Ahmed Reza',
     author_email='ahmedreza80@gmail.com',
