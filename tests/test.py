@@ -4,7 +4,7 @@ from easy_graph import (
     bar_chart, line_chart, scatter_plot, histogram, boxplot, 
     pie_chart, stacked_bar_chart, area_chart, hexbin_plot, 
     violin_plot, correlation_matrix, pair_plot,
-    candlestick_chart, autocorrelation_plot, lag_plot
+    candlestick_chart, autocorrelation_plot, lag_plot, choropleth_map, scattergeo_map, linegeo_map
 )
 
 # Creating a sample DataFrame
@@ -81,3 +81,34 @@ autocorrelation_plot(time_series_series, title='Autocorrelation Plot')
 
 # Testing the lag_plot function
 lag_plot(time_series_series, lag=1, title='Lag Plot')
+
+# Define test data and geojson (use appropriate data and geojson for testing)
+test_data = pd.DataFrame({
+    'locations': ['Location1', 'Location2'],
+    'color': [1, 2],
+    'lat': [34.0522, 36.7783],
+    'lon': [-118.2437, -119.4179],
+    'line_group': ['A', 'B'],
+})
+test_geojson = {}  # use an appropriate geojson object
+
+# Testing the choropleth_map function
+try:
+    choropleth_map(test_data, test_geojson, 'locations', 'color')
+    print("choropleth_map executed without error.")
+except Exception as e:
+    print(f"An error occurred in choropleth_map: {e}")
+
+# Testing the scattergeo_map function
+try:
+    scattergeo_map(test_data, 'lat', 'lon', 'locations')
+    print("scattergeo_map executed without error.")
+except Exception as e:
+    print(f"An error occurred in scattergeo_map: {e}")
+
+# Testing the linegeo_map function
+try:
+    linegeo_map(test_data, 'lat', 'lon', 'line_group')
+    print("linegeo_map executed without error.")
+except Exception as e:
+    print(f"An error occurred in linegeo_map: {e}")

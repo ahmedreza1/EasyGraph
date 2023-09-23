@@ -271,6 +271,50 @@ Parameters:
     title: The title of your graph.
     theme: The theme for the plot. Supports all seaborn and matplotlib themes.
 
+## Geographical Plotting 🌍
+
+Geographical plotting is essential for visualizing spatial distributions, relationships, and trends. EasyGraph offers a variety of charts to help analyze geographical data, uncover insights, and make data-driven decisions.
+
+### `choropleth_map(data, geojson, locations, color, title='Choropleth Map', theme=None, interactive=True)`
+
+Generates a choropleth map to visualize spatial data, revealing patterns, distributions, and variations across geographical areas.
+
+**Parameters:**
+- `data`: The pandas DataFrame containing your geographical data.
+- `geojson`: The GeoJSON object that represents the geographical features.
+- `locations`: The column in your DataFrame that matches the `featureidkey` in the GeoJSON object.
+- `color`: The column in your DataFrame representing the variable you want to visualize.
+- `title`: The title of your graph. Defaults to 'Choropleth Map'.
+- `theme`: The theme for the plot. Supports all seaborn and matplotlib themes. (Optional)
+- `interactive`: Whether to display the plot in interactive mode. Recommended for choropleth maps. Defaults to True.
+
+### `scattergeo_map(data, lat_col, lon_col, text_col, title='Scattergeo Map', theme=None, interactive=True)`
+
+Creates a scattergeo map to display individual data points on a geographical map, enabling the analysis of spatial relationships and trends.
+
+**Parameters:**
+- `data`: The pandas DataFrame containing your geographical data.
+- `lat_col`: The column in your DataFrame representing the latitude coordinates.
+- `lon_col`: The column in your DataFrame representing the longitude coordinates.
+- `text_col`: The column in your DataFrame representing the text information to be displayed on hover.
+- `title`: The title of your graph. Defaults to 'Scattergeo Map'.
+- `theme`: The theme for the plot. Supports all seaborn and matplotlib themes. (Optional)
+- `interactive`: Whether to display the plot in interactive mode. Recommended for scattergeo maps. Defaults to True.
+
+### `linegeo_map(data, lat_col, lon_col, line_group, title='Linegeo Map', theme=None, interactive=True)`
+
+Constructs a linegeo map to visualize connections or paths between geographical locations, aiding in the study of spatial patterns and distributions.
+
+**Parameters:**
+- `data`: The pandas DataFrame containing your geographical data.
+- `lat_col`: The column in your DataFrame representing the latitude coordinates.
+- `lon_col`: The column in your DataFrame representing the longitude coordinates.
+- `line_group`: The column in your DataFrame used to group rows into line segments.
+- `title`: The title of your graph. Defaults to 'Linegeo Map'.
+- `theme`: The theme for the plot. Supports all seaborn and matplotlib themes. (Optional)
+- `interactive`: Whether to display the plot in interactive mode. Recommended for linegeo maps. Defaults to True.
+
+
 # Contribution 🤝
 
 Feel free to fork, open a pull request, or submit issues. Let's make EasyGraph the easiest graphing package in the Python ecosystem together!
