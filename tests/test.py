@@ -1,8 +1,10 @@
 import pandas as pd
+import numpy as np
 from easy_graph import (
     bar_chart, line_chart, scatter_plot, histogram, boxplot, 
     pie_chart, stacked_bar_chart, area_chart, hexbin_plot, 
-    violin_plot, correlation_matrix, pair_plot
+    violin_plot, correlation_matrix, pair_plot,
+    candlestick_chart, autocorrelation_plot, lag_plot
 )
 
 # Creating a sample DataFrame
@@ -52,3 +54,30 @@ correlation_matrix(df, title='Correlation Matrix')
 
 # Testing the pair_plot function
 pair_plot(df, title='Pair Plot')
+
+# Creating synthetic data for candlestick_chart
+stock_data = {
+    'Date': pd.date_range(start='1/1/2023', periods=4, freq='M'),
+    'Open': [100, 150, 200, 250],
+    'High': [110, 160, 210, 260],
+    'Low': [90, 140, 190, 240],
+    'Close': [105, 155, 205, 255],
+}
+stock_df = pd.DataFrame(stock_data)
+
+# Testing the candlestick_chart function
+candlestick_chart(stock_df, 'Open', 'High', 'Low', 'Close', 'Date', title='Monthly Stock Prices', interactive=True)
+
+# Creating synthetic time series data for autocorrelation_plot and lag_plot
+time_series_data = {
+    'Date': pd.date_range(start='1/1/2023', periods=30, freq='D'),
+    'Value': np.random.randn(30).cumsum() # Cumulative sum of random numbers to create a time series
+}
+time_series_df = pd.DataFrame(time_series_data)
+time_series_series = time_series_df.set_index('Date')['Value']
+
+# Testing the autocorrelation_plot function
+autocorrelation_plot(time_series_series, title='Autocorrelation Plot')
+
+# Testing the lag_plot function
+lag_plot(time_series_series, lag=1, title='Lag Plot')

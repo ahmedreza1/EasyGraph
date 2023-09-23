@@ -254,4 +254,48 @@ def pair_plot(data, title='Pair Plot', theme=None, interactive=False):
     finally:
         set_theme()  # Reset to default theme after plotting
 
+# Here we are introducing Time Series Analysis, by adding a Candlestick Chart for stock price analysis, an Autocorrelation Plot, and a Lag Plot.
+
+def candlestick_chart(data, open_col, high_col, low_col, close_col, date_col, title='Candlestick Chart', theme=None, interactive=True):
+    set_theme(theme)
+    try:
+        if interactive:
+            fig = go.Figure(data=[go.Candlestick(x=data[date_col],
+                                                 open=data[open_col],
+                                                 high=data[high_col],
+                                                 low=data[low_col],
+                                                 close=data[close_col])])
+            fig.update_layout(title=title, xaxis_title='Date', yaxis_title='Price')
+            fig.show()
+        else:
+            print("Interactive mode is recommended for Candlestick Chart!")
+    except KeyError as e:
+        print(f"Column not found: {e}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        set_theme() # Reset to default theme after plotting
+
+def autocorrelation_plot(series, title='Autocorrelation Plot', theme=None):
+    set_theme(theme)
+    try:
+        pd_plot.autocorrelation_plot(series)
+        plt.title(title)
+        plt.show()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        set_theme() # Reset to default theme after plotting
+
+def lag_plot(series, lag=1, title='Lag Plot', theme=None):
+    set_theme(theme)
+    try:
+        pd_plot.lag_plot(series, lag=lag)
+        plt.title(title)
+        plt.show()
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        set_theme() # Reset to default theme after plotting
+
 # Additional functions for other chart types can be added here.
