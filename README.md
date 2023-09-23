@@ -230,6 +230,47 @@ Parameters:
     xlabel: The label for the x-axis.
     ylabel: The label for the y-axis.
 
+
+## Time Series Analysis 📈
+
+Time series analysis is crucial for analyzing temporal data, and EasyGraph offers a variety of charts to assist in uncovering patterns, anomalies, and trends in your time series data.
+
+### autocorrelation_plot(series, title='Autocorrelation Plot', theme=None)
+
+Visualizes the autocorrelation of a time series, helping to identify seasonality and trend in your data.
+
+Parameters:
+
+    series: The pandas Series containing your time series data.
+    title: The title of your graph.
+    theme: The theme for the plot. Supports all seaborn and matplotlib themes.
+
+### lag_plot(series, lag=1, title='Lag Plot', theme=None)
+
+Generates a lag plot to visualize the relationship between observations and their lags, aiding in identifying structure and randomness in time series data.
+
+Parameters:
+
+    series: The pandas Series containing your time series data.
+    lag: The lag between observations. Defaults to 1.
+    title: The title of your graph.
+    theme: The theme for the plot. Supports all seaborn and matplotlib themes.
+
+### candlestick_chart(data, open_col, high_col, low_col, close_col, datetime_col, title='Candlestick Chart', theme=None)
+
+Generates a candlestick chart to visualize the open, high, low, and close prices of a security over time, which is essential for financial time series analysis.
+
+Parameters:
+
+    data: The pandas DataFrame containing your time series data.
+    open_col: The column containing the opening prices.
+    high_col: The column containing the highest prices in the time period.
+    low_col: The column containing the lowest prices in the time period.
+    close_col: The column containing the closing prices.
+    datetime_col: The column containing the datetime information.
+    title: The title of your graph.
+    theme: The theme for the plot. Supports all seaborn and matplotlib themes.
+
 # Contribution 🤝
 
 Feel free to fork, open a pull request, or submit issues. Let's make EasyGraph the easiest graphing package in the Python ecosystem together!
