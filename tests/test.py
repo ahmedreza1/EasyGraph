@@ -49,10 +49,10 @@ hexbin_plot(df, 'Sales', 'Expense', title='Hexbin Plot of Sales and Expense', xl
 # Testing the violin_plot function.
 violin_plot(df, 'Sales', title='Sales Violin Plot', ylabel='Sales')
 
-# Testing the correlation_matrix function
+# Testing the correlation_matrix function.
 correlation_matrix(df, title='Correlation Matrix')
 
-# Testing the pair_plot function
+# Testing the pair_plot function.
 pair_plot(df, title='Pair Plot')
 
 # Creating synthetic data for candlestick_chart.
@@ -82,7 +82,7 @@ autocorrelation_plot(time_series_series, title='Autocorrelation Plot')
 # Testing the lag_plot function
 lag_plot(time_series_series, lag=1, title='Lag Plot')
 
-# Define test data and geojson (use appropriate data and geojson for testing)
+# Define test data and geojson (use appropriate data and geojson for testing).
 test_data = pd.DataFrame({
     'locations': ['Location1', 'Location2'],
     'color': [1, 2],
@@ -90,23 +90,23 @@ test_data = pd.DataFrame({
     'lon': [-118.2437, -119.4179],
     'line_group': ['A', 'B'],
 })
-test_geojson = {}  # use an appropriate geojson object
+test_geojson = {}  # use an appropriate geojson object.
 
-# Testing the choropleth_map function
+# Testing the choropleth_map function.
 try:
     choropleth_map(test_data, test_geojson, 'locations', 'color')
     print("choropleth_map executed without error.")
 except Exception as e:
     print(f"An error occurred in choropleth_map: {e}")
 
-# Testing the scattergeo_map function
+# Testing the scattergeo_map function.
 try:
     scattergeo_map(test_data, 'lat', 'lon', 'locations')
     print("scattergeo_map executed without error.")
 except Exception as e:
     print(f"An error occurred in scattergeo_map: {e}")
 
-# Testing the linegeo_map function
+# Testing the linegeo_map function.
 try:
     linegeo_map(test_data, 'lat', 'lon', 'line_group')
     print("linegeo_map executed without error.")
