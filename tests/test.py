@@ -25,28 +25,28 @@ bar_chart(df, 'Months', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='
 # Testing the line_chart function.
 line_chart(df, 'Months', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales')
 
-# Testing the scatter_plot function
+# Testing the scatter_plot function.
 scatter_plot(df, 'Sales', 'Expense', title='Sales vs Expense', xlabel='Sales', ylabel='Expense')
 
-# Testing the histogram function
+# Testing the histogram function.
 histogram(df, 'Sales', title='Sales Distribution', xlabel='Sales', ylabel='Frequency')
 
-# Testing the boxplot function
+# Testing the boxplot function.
 boxplot(df, 'Sales', title='Sales Boxplot', ylabel='Sales')
 
-# Testing the pie_chart function
+# Testing the pie_chart function.
 pie_chart(df, 'Sales', 'Months', title='Sales Distribution', interactive=True)
 
-# Testing the stacked_bar_chart function
+# Testing the stacked_bar_chart function.
 stacked_bar_chart(df, 'Months', ['Sales', 'Expense'], title='Monthly Sales and Expense', xlabel='Month', ylabel='Value')
 
-# Testing the area_chart function
+# Testing the area_chart function.
 area_chart(df, 'Months', 'Sales', title='Sales Area Chart', xlabel='Month', ylabel='Sales')
 
-# Testing the hexbin_plot function
+# Testing the hexbin_plot function.
 hexbin_plot(df, 'Sales', 'Expense', title='Hexbin Plot of Sales and Expense', xlabel='Sales', ylabel='Expense')
 
-# Testing the violin_plot function
+# Testing the violin_plot function.
 violin_plot(df, 'Sales', title='Sales Violin Plot', ylabel='Sales')
 
 # Testing the correlation_matrix function
