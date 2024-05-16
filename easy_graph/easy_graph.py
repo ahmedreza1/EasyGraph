@@ -35,7 +35,7 @@ def bar_chart(data, x_col, y_col, title='Bar Chart', xlabel='X-axis', ylabel='Y-
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def line_chart(data, x_col, y_col, title='Line Chart', xlabel='X-axis', ylabel='Y-axis', theme=None, interactive=False):
     set_theme(theme)
@@ -54,7 +54,7 @@ def line_chart(data, x_col, y_col, title='Line Chart', xlabel='X-axis', ylabel='
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def scatter_plot(data, x_col, y_col, title='Scatter Plot', xlabel='X-axis', ylabel='Y-axis', theme=None, interactive=False):
     """Generate a scatter plot from a pandas DataFrame."""
@@ -74,7 +74,7 @@ def scatter_plot(data, x_col, y_col, title='Scatter Plot', xlabel='X-axis', ylab
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme() # Reset to default theme after plotting
+        set_theme() # Reset to default theme after plotting.
 
 def histogram(data, col, bins=10, title='Histogram', xlabel='X-axis', ylabel='Frequency', theme=None, interactive=False):
     """Generate a histogram from a pandas DataFrame."""
@@ -95,7 +95,7 @@ def histogram(data, col, bins=10, title='Histogram', xlabel='X-axis', ylabel='Fr
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def boxplot(data, col, title='Boxplot', ylabel='Y-axis', theme=None, interactive=False):
     """Generate a box plot from a pandas DataFrame."""
@@ -115,7 +115,7 @@ def boxplot(data, col, title='Boxplot', ylabel='Y-axis', theme=None, interactive
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def pie_chart(data, col, labels_col, title='Pie Chart', theme=None, interactive=False):
     """Generate a pie chart from a pandas DataFrame."""
@@ -133,7 +133,7 @@ def pie_chart(data, col, labels_col, title='Pie Chart', theme=None, interactive=
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def stacked_bar_chart(data, x_col, y_cols, title='Stacked Bar Chart', xlabel='X-axis', ylabel='Y-axis', theme=None, interactive=False):
     """Generate a stacked bar chart from a pandas DataFrame."""
@@ -153,7 +153,7 @@ def stacked_bar_chart(data, x_col, y_cols, title='Stacked Bar Chart', xlabel='X-
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def area_chart(data, x_col, y_col, title='Area Chart', xlabel='X-axis', ylabel='Y-axis', theme=None, interactive=False):
     """Generate an area chart from a pandas DataFrame."""
@@ -173,7 +173,7 @@ def area_chart(data, x_col, y_col, title='Area Chart', xlabel='X-axis', ylabel='
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def hexbin_plot(data, x_col, y_col, gridsize=50, title='Hexbin Plot', xlabel='X-axis', ylabel='Y-axis', theme=None, interactive=False):
     """Generate a hexbin plot from a pandas DataFrame."""
@@ -194,7 +194,7 @@ def hexbin_plot(data, x_col, y_col, gridsize=50, title='Hexbin Plot', xlabel='X-
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def violin_plot(data, col, title='Violin Plot', ylabel='Y-axis', theme=None, interactive=False):
     """Generate a violin plot from a pandas DataFrame using Seaborn."""
@@ -214,7 +214,7 @@ def violin_plot(data, col, title='Violin Plot', ylabel='Y-axis', theme=None, int
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def correlation_matrix(data, title='Correlation Matrix', theme=None, interactive=False):
     """Generate a correlation matrix from a pandas DataFrame using Seaborn."""
@@ -234,7 +234,7 @@ def correlation_matrix(data, title='Correlation Matrix', theme=None, interactive
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def pair_plot(data, title='Pair Plot', theme=None, interactive=False):
     """Generate a pair plot from a pandas DataFrame using Seaborn."""
@@ -252,7 +252,7 @@ def pair_plot(data, title='Pair Plot', theme=None, interactive=False):
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 # Here we are introducing Time Series Analysis, by adding a Candlestick Chart for stock price analysis, an Autocorrelation Plot, and a Lag Plot.
 
@@ -274,7 +274,7 @@ def candlestick_chart(data, open_col, high_col, low_col, close_col, date_col, ti
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme() # Reset to default theme after plotting
+        set_theme() # Reset to default theme after plotting.
 
 def autocorrelation_plot(series, title='Autocorrelation Plot', theme=None):
     set_theme(theme)
@@ -285,7 +285,7 @@ def autocorrelation_plot(series, title='Autocorrelation Plot', theme=None):
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme() # Reset to default theme after plotting
+        set_theme() # Reset to default theme after plotting.
 
 def lag_plot(series, lag=1, title='Lag Plot', theme=None):
     set_theme(theme)
@@ -296,7 +296,7 @@ def lag_plot(series, lag=1, title='Lag Plot', theme=None):
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme() # Reset to default theme after plotting
+        set_theme() # Reset to default theme after plotting.
 
 # Here we are introducing Geographical Plotting, by adding three types of maps Choropleth, Scattergeo, and Linegeo
 
@@ -314,7 +314,7 @@ def choropleth_map(data, geojson, locations, color, title='Choropleth Map', them
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def scattergeo_map(data, lat_col, lon_col, text_col, title='Scattergeo Map', theme=None, interactive=True):
     set_theme(theme)
@@ -329,7 +329,7 @@ def scattergeo_map(data, lat_col, lon_col, text_col, title='Scattergeo Map', the
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 def linegeo_map(data, lat_col, lon_col, line_group, title='Linegeo Map', theme=None, interactive=True):
     set_theme(theme)
@@ -344,6 +344,6 @@ def linegeo_map(data, lat_col, lon_col, line_group, title='Linegeo Map', theme=N
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
-        set_theme()  # Reset to default theme after plotting
+        set_theme()  # Reset to default theme after plotting.
 
 # Additional functions for other chart types can be added here.
