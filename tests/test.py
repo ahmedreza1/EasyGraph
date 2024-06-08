@@ -9,7 +9,7 @@ from easy_graph import (
 
 # Creating a sample DataFrame
 data = {
-    'Month': ['January', 'February', 'March', 'April'],
+    'Months': ['January', 'February', 'March', 'April'],
     'Sales': [100, 200, 150, 250],
     'Expense': [90, 170, 130, 210],
     'Profit': [10, 30, 20, 40],
