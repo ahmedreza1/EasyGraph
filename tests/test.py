@@ -7,7 +7,7 @@ from easy_graph import (
     candlestick_chart, autocorrelation_plot, lag_plot, choropleth_map, scattergeo_map, linegeo_map
 )
 
-# Creating a sample DataFrame
+# Creating a sample DataFrame.
 data = {
     'Months': ['January', 'February', 'March', 'April'],
     'Sales': [100, 200, 150, 250],
@@ -16,13 +16,13 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# Adding a categorical variable for scatter plot
+# Adding a categorical variable for scatter plot.
 df['Is Profitable'] = df['Profit'] > 0
 
-# Testing the bar_chart function
+# Testing the bar_chart function.
 bar_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales', interactive=True)
 
-# Testing the line_chart function
+# Testing the line_chart function.
 line_chart(df, 'Month', 'Sales', title='Monthly Sales', xlabel='Month', ylabel='Sales')
 
 # Testing the scatter_plot function
