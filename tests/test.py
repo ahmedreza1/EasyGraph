@@ -55,7 +55,7 @@ correlation_matrix(df, title='Correlation Matrix')
 # Testing the pair_plot function
 pair_plot(df, title='Pair Plot')
 
-# Creating synthetic data for candlestick_chart
+# Creating synthetic data for candlestick_chart.
 stock_data = {
     'Date': pd.date_range(start='1/1/2023', periods=4, freq='M'),
     'Open': [100, 150, 200, 250],
@@ -65,18 +65,18 @@ stock_data = {
 }
 stock_df = pd.DataFrame(stock_data)
 
-# Testing the candlestick_chart function
+# Testing the candlestick_chart function.
 candlestick_chart(stock_df, 'Open', 'High', 'Low', 'Close', 'Date', title='Monthly Stock Prices', interactive=True)
 
-# Creating synthetic time series data for autocorrelation_plot and lag_plot
+# Creating synthetic time series data for autocorrelation_plot and lag_plot.
 time_series_data = {
     'Date': pd.date_range(start='1/1/2023', periods=30, freq='D'),
-    'Value': np.random.randn(30).cumsum() # Cumulative sum of random numbers to create a time series
+    'Value': np.random.randn(30).cumsum() # Cumulative sum of random numbers to create a time series.
 }
 time_series_df = pd.DataFrame(time_series_data)
 time_series_series = time_series_df.set_index('Date')['Value']
 
-# Testing the autocorrelation_plot function
+# Testing the autocorrelation_plot function.
 autocorrelation_plot(time_series_series, title='Autocorrelation Plot')
 
 # Testing the lag_plot function

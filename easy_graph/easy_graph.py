@@ -268,7 +268,7 @@ def candlestick_chart(data, open_col, high_col, low_col, close_col, date_col, ti
             fig.update_layout(title=title, xaxis_title='Date', yaxis_title='Price')
             fig.show()
         else:
-            print("Interactive mode is recommended for Candlestick Chart!")
+            print("Interactive mode is highly recommended for Candlestick Chart!")
     except KeyError as e:
         print(f"Column not found: {e}")
     except Exception as e:
@@ -310,7 +310,7 @@ def choropleth_map(data, geojson, locations, color, title='Choropleth Map', them
             fig.update_geos(projection_type="mercator")
             fig.show()
         else:
-            print("Interactive mode is recommended for Choropleth Map!")
+            print("Interactive mode is highly recommended for Choropleth Map!")
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
@@ -325,7 +325,7 @@ def scattergeo_map(data, lat_col, lon_col, text_col, title='Scattergeo Map', the
             fig.update_geos(projection_type="mercator")
             fig.show()
         else:
-            print("Interactive mode is recommended for Scattergeo Map!")
+            print("Interactive mode is highly recommended for Scattergeo Map!")
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
@@ -340,7 +340,7 @@ def linegeo_map(data, lat_col, lon_col, line_group, title='Linegeo Map', theme=N
             fig.update_geos(projection_type="mercator")
             fig.show()
         else:
-            print("Interactive mode is recommended for Linegeo Map!")
+            print("Interactive mode is highly recommended for Linegeo Map!")
     except Exception as e:
         print(f"An error occurred: {e}")
     finally:
