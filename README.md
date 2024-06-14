@@ -316,6 +316,8 @@ Constructs a linegeo map to visualize connections or paths between geographical 
 - `theme`: The theme for the plot. Supports all seaborn and matplotlib themes. (Optional)
 - `interactive`: Whether to display the plot in interactive mode. Recommended for linegeo maps. Defaults to True.
 
+# More Charts, Maps, Plots Coming very soon.
+
 
 # Contribution 🤝
 

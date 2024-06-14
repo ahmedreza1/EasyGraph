@@ -101,14 +101,14 @@ except Exception as e:
 
 # Testing the scattergeo_map function.
 try:
-    scattergeo_map(test_data, 'lat', 'lon', 'locations')
+    scattergeo_map(test_data, 'latitude', 'longitude', 'locations')
     print("scattergeo_map executed without error.")
 except Exception as e:
     print(f"An error occurred in scattergeo_map: {e}")
 
 # Testing the linegeo_map function.
 try:
-    linegeo_map(test_data, 'lat', 'lon', 'line_group')
+    linegeo_map(test_data, 'latitude', 'longitude', 'line_group')
     print("linegeo_map executed without error.")
 except Exception as e:
     print(f"An error occurred in linegeo_map: {e}")
