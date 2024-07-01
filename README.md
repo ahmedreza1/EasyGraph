@@ -314,7 +314,7 @@ Constructs a linegeo map to visualize connections or paths between geographical 
 - `line_group`: The column in your DataFrame used to group rows into line segments.
 - `title`: The title of your graph. Defaults to 'Linegeo Map'.
 - `theme`: The theme for the plot. Supports all seaborn and matplotlib themes. (Optional)
-- `interactive`: Whether to display the plot in interactive mode. Recommended for linegeo maps. Defaults to True
+- `interactive`: Whether to display the plot in interactive mode. Recommended for linegeo maps. Defaults to True.
 
 # More Charts, Maps, Plots Coming very soon.
 - (In August 2024)
