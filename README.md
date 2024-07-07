@@ -317,7 +317,7 @@ Constructs a linegeo map to visualize connections or paths between geographical 
 - `interactive`: Whether to display the plot in interactive mode. Recommended for linegeo maps. Defaults to True.
 
 # More Charts, Maps, Plots Coming very soon.
-
+- (In Aug 2024)
 
 # Contribution 🤝
 
