@@ -220,7 +220,7 @@ Parameters:
 
 ## pair_plot(data, title='Pair Plot', theme=None)
 
-Generates a pair plot to visualize the relationships between all pairs of variables in your dataset
+Generates a pair plot to visualize the relationships between all pairs of variables in your dataset.
 Parameters
 
 Parameters:
